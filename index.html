@@ -1,9 +1,18 @@
 <html> 
 <head> 
-    <title> Add a WhatsApp sharing link on a website </title> 
+    <title>Add a WhatsApp sharing link on a website</title> 
 </head> 
 <style>
-     //css code to hide the WhatsApp sharing link on the large screen
+	h3 {
+		color: #000;
+	}
+	
+	div {
+		display: block;
+		margin-top: 20px;
+	}
+	
+    // CSS to hide the WhatsApp sharing link on a larger screen
     @media screen and (min-width: 1000px) {
         a {
             display: none
@@ -12,13 +21,16 @@
 </style>
 
 <body> 
-    <h3 style="color:brown"> WhatsApp sharing Link </h3> 
-    <!-- create a link using anchor tab -->
-    <a href="whatsapp://send?text=https://jolivillas.com/" 		data-action="share/whatsapp/share"
-		target="_blank"> Share to WhatsApp </a> 
+    <h3>WhatsApp sharing Link</h3>
 	
-	<button onclick="window.open('whatsapp://send?text=https://jolivillas.com/')"> Sharing WhatsApp </button>  
+    <!-- Share via HTML link -->
+	<div>
+		<a href="whatsapp://send?text=https://www.google.com/" data-action="share/whatsapp/share" target="_blank">WhatsApp Share</a>
+	</div>
+	
+	<!-- Share via link with javascript click event -->
+	<div>
+		<button onclick="window.open('whatsapp://send?text=https://www.google.com/')">WhatsApp Share</button>
+	</div>
 </body> 
 </html>
-
- 
